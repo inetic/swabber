@@ -137,7 +137,7 @@ def main():
         ch.setFormatter(formatter)
         mainlogger.addHandler(ch)
 
-    bfetcher = BanFetcher(BIND_STRINGS[0], "eth+", "iptables", threading.Lock())
+    bfetcher = BanFetcher(BIND_STRINGS, "eth+", "iptables", [], threading.Lock())
     bfetcher.run()
 
 if __name__ == "__main__":
